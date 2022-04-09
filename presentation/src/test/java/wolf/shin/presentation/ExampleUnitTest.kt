@@ -1,4 +1,4 @@
-package wolf.shin.androidearlyadopter
+package wolf.shin.presentation
 
 import org.junit.Test
 

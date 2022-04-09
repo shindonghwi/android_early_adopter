@@ -1,4 +1,4 @@
-package wolf.shin.androidearlyadopter
+package wolf.shin.presentation
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package wolf.shin.androidearlyadopter
+package wolf.shin.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import wolf.shin.androidearlyadopter.ui.theme.AndroidEarlyAdopterTheme
+import wolf.shin.presentation.ui.theme.AndroidEarlyAdopterTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
