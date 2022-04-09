@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidEarlyAdopter"
 include ':presentation'
 include ':domain'
+include ':data'
