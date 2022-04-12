@@ -3,38 +3,56 @@ package wolf.shin.presentation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import wolf.shin.presentation.ui.theme.AndroidEarlyAdopterTheme
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import wolf.shin.presentation.model.DockBarItem
+import wolf.shin.presentation.navigation.BottomNavigationBar
+import wolf.shin.presentation.navigation.InitNavigator
+import wolf.shin.presentation.screen.theme.AndroidEarlyAdopterTheme
+import wolf.shin.resource.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             AndroidEarlyAdopterTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
-                    Greeting("Github - Jira 연동 테스트")
-                }
+
+                val navController = rememberNavController()
+
+                MainView(navController)
+
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    AndroidEarlyAdopterTheme {
-        Greeting("Android")
+private fun MainView(navController: NavHostController) {
+    Scaffold(
+        bottomBar = {
+            BottomNavigationBar(
+                items = listOf(
+                    DockBarItem(
+                        name = "Home",
+                        route = "Home",
+                        defaultIcon = R.drawable.ic_dockbar_off_home,
+                        selectedIcon = R.drawable.ic_dockbar_on_home
+                    ),
+                    DockBarItem(
+                        name = "News",
+                        route = "News",
+                        defaultIcon = R.drawable.ic_dockbar_off_news,
+                        selectedIcon = R.drawable.ic_dockbar_on_news
+                    ),
+                ),
+                navController = navController,
+                onItemClick = {
+                    navController.navigate(it.route)
+                })
+        }
+    ) {
+        InitNavigator(navController = navController)
     }
 }
