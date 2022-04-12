@@ -3,13 +3,13 @@ package wolf.shin.presentation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import wolf.shin.presentation.screen.home.HomeScreen
-import wolf.shin.presentation.screen.news.NewsScreen
+import wolf.shin.presentation.model.DockBarItem
+import wolf.shin.presentation.navigation.BottomNavigationBar
+import wolf.shin.presentation.navigation.InitNavigator
 import wolf.shin.presentation.screen.theme.AndroidEarlyAdopterTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,22 +18,40 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidEarlyAdopterTheme {
 
-                SetNavHost(navController = rememberNavController())
+                val navController = rememberNavController()
+
+                MainView(navController)
 
             }
         }
     }
 }
 
-
 @Composable
-fun SetNavHost(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = "home") {
-        composable("home") {
-            HomeScreen()
+private fun MainView(navController: NavHostController) {
+    Scaffold(
+        bottomBar = {
+            BottomNavigationBar(
+                items = listOf(
+                    DockBarItem(
+                        name = "Home",
+                        route = "Home",
+                        defaultIcon = R.drawable.ic_dockbar_off_home,
+                        selectedIcon = R.drawable.ic_dockbar_on_home
+                    ),
+                    DockBarItem(
+                        name = "News",
+                        route = "News",
+                        defaultIcon = R.drawable.ic_dockbar_off_news,
+                        selectedIcon = R.drawable.ic_dockbar_on_news
+                    ),
+                ),
+                navController = navController,
+                onItemClick = {
+                    navController.navigate(it.route)
+                })
         }
-        composable("news") {
-            NewsScreen()
-        }
+    ) {
+        InitNavigator(navController = navController)
     }
 }
