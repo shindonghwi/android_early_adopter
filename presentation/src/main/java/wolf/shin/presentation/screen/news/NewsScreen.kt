@@ -1,4 +1,4 @@
-package wolf.shin.presentation.ui.screen.news
+package wolf.shin.presentation.screen.news
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

@@ -1,4 +1,4 @@
-package wolf.shin.presentation.ui.screen.home
+package wolf.shin.presentation.screen.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
