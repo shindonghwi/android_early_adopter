@@ -11,6 +11,7 @@ import wolf.shin.presentation.model.DockBarItem
 import wolf.shin.presentation.navigation.BottomNavigationBar
 import wolf.shin.presentation.navigation.InitNavigator
 import wolf.shin.presentation.screen.theme.AndroidEarlyAdopterTheme
+import wolf.shin.resource.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
