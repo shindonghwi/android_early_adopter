@@ -1,4 +1,4 @@
-package wolf.shin.presentation.screen.theme
+package wolf.shin.earlyadopter.screen.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

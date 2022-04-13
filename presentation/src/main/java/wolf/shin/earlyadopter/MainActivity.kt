@@ -1,4 +1,4 @@
-package wolf.shin.presentation
+package wolf.shin.earlyadopter
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,10 +7,10 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import wolf.shin.presentation.model.DockBarItem
-import wolf.shin.presentation.navigation.BottomNavigationBar
-import wolf.shin.presentation.navigation.InitNavigator
-import wolf.shin.presentation.screen.theme.AndroidEarlyAdopterTheme
+import wolf.shin.earlyadopter.model.DockBarItem
+import wolf.shin.earlyadopter.navigation.BottomNavigationBar
+import wolf.shin.earlyadopter.navigation.InitNavigator
+import wolf.shin.earlyadopter.screen.theme.AndroidEarlyAdopterTheme
 import wolf.shin.resource.R
 
 class MainActivity : ComponentActivity() {

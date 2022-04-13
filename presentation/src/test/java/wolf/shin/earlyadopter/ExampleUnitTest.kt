@@ -1,4 +1,4 @@
-package wolf.shin.presentation
+package wolf.shin.earlyadopter
 
 import org.junit.Test
 
