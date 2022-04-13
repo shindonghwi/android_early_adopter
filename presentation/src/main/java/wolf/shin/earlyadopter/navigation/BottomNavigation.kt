@@ -1,4 +1,4 @@
-package wolf.shin.presentation.navigation
+package wolf.shin.earlyadopter.navigation
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.BottomNavigation
@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import wolf.shin.presentation.model.DockBarItem
+import wolf.shin.earlyadopter.model.DockBarItem
 
 @Composable
 fun BottomNavigationBar(

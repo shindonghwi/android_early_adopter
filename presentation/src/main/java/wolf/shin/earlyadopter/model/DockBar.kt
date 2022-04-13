@@ -1,4 +1,4 @@
-package wolf.shin.presentation.model
+package wolf.shin.earlyadopter.model
 
 data class DockBarItem(
     val name: String,

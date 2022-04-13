@@ -1,4 +1,4 @@
-package wolf.shin.presentation.screen.home
+package wolf.shin.earlyadopter.screen.news
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,14 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun HomeScreen() {
+fun NewsScreen() {
     Scaffold(modifier = Modifier.fillMaxSize()) {
 
         Column(
             modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "Home", style = MaterialTheme.typography.h4, color = Color.Black)
+            Text(text = "News", style = MaterialTheme.typography.h4, color = Color.Black)
         }
     }
 }
