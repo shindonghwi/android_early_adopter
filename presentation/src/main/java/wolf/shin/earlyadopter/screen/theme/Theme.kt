@@ -1,4 +1,4 @@
-package wolf.shin.presentation.screen.theme
+package wolf.shin.earlyadopter.screen.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
