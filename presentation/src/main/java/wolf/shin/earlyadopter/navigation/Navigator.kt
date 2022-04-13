@@ -9,11 +9,14 @@ import wolf.shin.earlyadopter.screen.news.NewsScreen
 
 @Composable
 fun InitNavigator(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = "Home") {
-        composable("Home") {
+    NavHost(
+        navController = navController,
+        startDestination = ScreenRouter.HomeScreen.route
+    ) {
+        composable(ScreenRouter.HomeScreen.route) {
             HomeScreen()
         }
-        composable("News") {
+        composable(ScreenRouter.NewsScreen.route) {
             NewsScreen()
         }
     }
