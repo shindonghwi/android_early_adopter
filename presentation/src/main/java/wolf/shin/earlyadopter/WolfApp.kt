@@ -29,3 +29,11 @@ fun WolfApp() {
         }
     }
 }
+
+enum class TabDirections(
+    val route: String,
+) {
+    HOME("home"),
+    COMPANY("news"),
+
+}
