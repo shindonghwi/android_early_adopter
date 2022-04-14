@@ -20,8 +20,7 @@ import wolf.shin.earlyadopter.model.DockBarItem
 fun BottomNavigationBar(
     modifier: Modifier = Modifier,
     items: List<DockBarItem>,
-    navController: NavHostController,
-    onItemClick: (DockBarItem) -> Unit
+    navController: NavHostController
 ) {
     val backStackEntry = navController.currentBackStackEntryAsState()
     BottomNavigation(
@@ -29,21 +28,21 @@ fun BottomNavigationBar(
         backgroundColor = Color.White,
         elevation = 5.dp
     ) {
-        items.forEach { item ->
-            val selected = item.route == backStackEntry.value?.destination?.route
+        items.forEach { tab ->
+            val selected = tab.route == backStackEntry.value?.destination?.route
             BottomNavigationItem(
                 selected = selected,
-                onClick = { onItemClick(item) },
+                onClick = { navController.navigate(tab.route) },
                 selectedContentColor = Color.DarkGray,
                 unselectedContentColor = Color.LightGray,
                 icon = {
                     Column {
                         Icon(
-                            painterResource(id = if (selected) item.selectedIcon else item.defaultIcon),
-                            contentDescription = item.name
+                            painterResource(id = if (selected) tab.selectedIcon else tab.defaultIcon),
+                            contentDescription = tab.name
                         )
                         Text(
-                            text = item.name,
+                            text = tab.name,
                             textAlign = TextAlign.Center,
                             fontSize = 10.sp
                         )
