@@ -15,17 +15,9 @@ fun WolfApp() {
         val navController = rememberNavController()
 
         Scaffold(
-            bottomBar = {
-                BottomNavigationBar(
-                    items = listOf(
-                        DockBarItem(name = "Home", route = "Home", defaultIcon = R.drawable.ic_dockbar_off_home, selectedIcon = R.drawable.ic_dockbar_on_home),
-                        DockBarItem(name = "News", route = "News", defaultIcon = R.drawable.ic_dockbar_off_news, selectedIcon = R.drawable.ic_dockbar_on_news),
-                    ),
-                    navController = navController
-                )
-            }
+            bottomBar = { MyBottomNavigation(navController = navController) }
         ) {
-            InitNavigator(navController = navController)
+            MyAppNavGraph(navController = navController)
         }
     }
 }
