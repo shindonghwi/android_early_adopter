@@ -1,6 +1,7 @@
 package wolf.shin.earlyadopter.screen.home.detail
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -10,9 +11,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import wolf.shin.earlyadopter.screen.company.CompanyDirections
 
 @Composable
-fun HomeDetail(from: String, content: @Composable () -> Unit = {}) {
+fun DetailScreen(from: String, content: @Composable () -> Unit = {}) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -34,10 +36,10 @@ fun HomeDetail(from: String, content: @Composable () -> Unit = {}) {
 @Preview
 fun DetailScreenPreview() {
     MaterialTheme {
-//        DetailScreen(from = CompanyDirections.DETAIL.route) {
-//            Button(onClick = {}) {
-//                Text("Move To Detail 2")
-//            }
-//        }
+        DetailScreen(from = CompanyDirections.DETAIL.route) {
+            Button(onClick = {}) {
+                Text("Move To Detail 2")
+            }
+        }
     }
 }
