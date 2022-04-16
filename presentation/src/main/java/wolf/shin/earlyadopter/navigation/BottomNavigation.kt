@@ -1,46 +1,37 @@
 package wolf.shin.earlyadopter.navigation
 
-import android.media.Image
-import androidx.compose.foundation.layout.Column
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavDestination
 import androidx.navigation.NavGraph
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import wolf.shin.earlyadopter.TabDirections
 import wolf.shin.earlyadopter.model.DockBarItem
+import wolf.shin.earlyadopter.model.screen_router.CompanyScreenRouter
+import wolf.shin.earlyadopter.model.screen_router.HomeScreenRouter
+import wolf.shin.earlyadopter.model.screen_router.MoreScreenRouter
+import wolf.shin.earlyadopter.model.screen_router.NotificationScreenRouter
 
 @Composable
 fun BottomNavigationBar(
-    modifier: Modifier = Modifier,
-    items: List<DockBarItem>,
     navController: NavHostController
 ) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute =
-        navBackStackEntry?.destination?.route ?: TabDirections.HOME
-    val tabs = TabDirections.values().toList()
+        navBackStackEntry?.destination?.route ?: DockBarItem.HOME
+    val tabs = DockBarItem.values().toList()
     BottomNavigation {
         tabs.forEach { tab ->
             val route = tab.route
             BottomNavigationItem(
-                icon = {
-                    Image(
-                        painterResource(tab.icon),
-                        contentDescription = "",
-                    )
-                },
+                icon = { Icon(painter = painterResource(id = tab.icon), contentDescription = tab.route) },
                 label = { Text(text = route, fontSize = 9.sp) },
                 selectedContentColor = Color.White,
                 unselectedContentColor = Color.White.copy(0.4f),
@@ -77,9 +68,9 @@ private val NavGraph.startDestination: NavDestination?
 
 private fun findTabRootRoute(tab: String): String {
     return when (tab) {
-        TabDirections.HOME.route -> HomeDirections.ROOT.route
-        TabDirections.COMPANY.route -> CompanyDirections.ROOT.route
-        TabDirections.NOTIFICATION.route -> NotificationDirections.ROOT.route
-        else -> MoreDirections.ROOT.route
+        DockBarItem.HOME.route -> HomeScreenRouter.ROOT.route
+        DockBarItem.COMPANY.route -> CompanyScreenRouter.ROOT.route
+        DockBarItem.NOTIFICATION.route -> NotificationScreenRouter.ROOT.route
+        else -> MoreScreenRouter.ROOT.route
     }
 }

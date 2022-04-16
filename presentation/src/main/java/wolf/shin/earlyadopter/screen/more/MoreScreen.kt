@@ -1,5 +1,4 @@
-package wolf.shin.earlyadopter.screen.home.detail
-
+package wolf.shin.earlyadopter.screen.more
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
@@ -11,10 +10,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import wolf.shin.earlyadopter.screen.company.CompanyDirections
 
 @Composable
-fun DetailScreen(from: String, content: @Composable () -> Unit = {}) {
+fun MoreScreen(navigateToDetail: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -23,23 +21,23 @@ fun DetailScreen(from: String, content: @Composable () -> Unit = {}) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = from,
+            text = "MoreScreen",
             fontSize = 25.sp,
             fontWeight = FontWeight.Bold,
         )
         Spacer(modifier = Modifier.padding(10.dp))
-        content()
+        Button(onClick = { navigateToDetail() }) {
+            Text("Move to DetailScreen")
+        }
     }
 }
 
 @Composable
 @Preview
-fun DetailScreenPreview() {
+fun MoreScreenPreview() {
     MaterialTheme {
-        DetailScreen(from = CompanyDirections.DETAIL.route) {
-            Button(onClick = {}) {
-                Text("Move To Detail 2")
-            }
+        MoreScreen {
+
         }
     }
 }
