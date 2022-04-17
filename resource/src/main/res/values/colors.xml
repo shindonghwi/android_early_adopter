@@ -70,4 +70,16 @@
     <color name="green800">#009833</color>
     <color name="green900">#008E30</color>
 
+    <!-- Yellow 색상 -->
+    <color name="yellow50">#FFF7DB</color>
+    <color name="yellow100">#FFF3C9</color>
+    <color name="yellow200">#FFEBA4</color>
+    <color name="yellow300">#FFE589</color>
+    <color name="yellow400">#FFDF6E</color>
+    <color name="yellow500">#FFD749</color>
+    <color name="yellow600">#FFCF24</color>
+    <color name="yellow700">#FFBD12</color>
+    <color name="yellow800">#F5B100</color>
+    <color name="yellow900">#E5A500</color>
+
 </resources>
