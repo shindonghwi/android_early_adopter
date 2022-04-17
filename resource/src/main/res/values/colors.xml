@@ -46,4 +46,16 @@
     <color name="red800">#FF334C</color>
     <color name="red900">#FF001F</color>
 
+    <!-- Blue 색상 -->
+    <color name="blue50">#E0EAFF</color>
+    <color name="blue100">#CBDCFF</color>
+    <color name="blue200">#ADC7FF</color>
+    <color name="blue300">#83ACFF</color>
+    <color name="blue400">#5A90FF</color>
+    <color name="blue500">#3174FF</color>
+    <color name="blue600">#1B65FF</color>
+    <color name="blue700">#0959FF</color>
+    <color name="blue800">#0052F9</color>
+    <color name="blue900">#004BE7</color>
+
 </resources>
