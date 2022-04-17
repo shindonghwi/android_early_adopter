@@ -34,4 +34,16 @@
     <color name="gray800">#212936</color>
     <color name="gray900">#171A22</color>
 
+    <!-- Red 색상 -->
+    <color name="red50">#FFE8EA</color>
+    <color name="red100">#FFE0E4</color>
+    <color name="red200">#FFCCD2</color>
+    <color name="red300">#FFB3BC</color>
+    <color name="red400">#FF99A5</color>
+    <color name="red500">#FA7A8A</color>
+    <color name="red600">#FF6678</color>
+    <color name="red700">#FF4D62</color>
+    <color name="red800">#FF334C</color>
+    <color name="red900">#FF001F</color>
+
 </resources>
