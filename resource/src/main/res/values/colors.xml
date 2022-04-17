@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary 색상 -->
+    <color name="color10">#FFFFFF</color>
+    <color name="primary50">#FFF4F0</color>
+    <color name="primary100">#FFE3D8</color>
+    <color name="primary200">#FFD2BE</color>
+    <color name="primary300">#FFA47E</color>
+    <color name="primary400">#FF8652</color>
+    <color name="primary500">#FF6827</color>
+    <color name="primary600">#FF560E</color>
+    <color name="primary700">#F04F0A</color>
+    <color name="primary800">#E34400</color>
+    <color name="primary900">#D03E00</color>
+
+
 </resources>
