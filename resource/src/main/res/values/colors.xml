@@ -21,5 +21,17 @@
     <color name="primary800">#E34400</color>
     <color name="primary900">#D03E00</color>
 
+    <!-- Gray 색상 -->
+    <color name="gray10">#FFFFFF</color>
+    <color name="gray50">#F8F8F9</color>
+    <color name="gray100">#F0F2F4</color>
+    <color name="gray200">#E5E7EB</color>
+    <color name="gray300">#D1D5DB</color>
+    <color name="gray400">#9DA3AE</color>
+    <color name="gray500">#6C727F</color>
+    <color name="gray600">#4D5562</color>
+    <color name="gray700">#394150</color>
+    <color name="gray800">#212936</color>
+    <color name="gray900">#171A22</color>
 
 </resources>
