@@ -8,15 +8,15 @@ import androidx.compose.runtime.Composable
 import wolf.shin.earlyadopter.screen.theme.font.PretendardTypography
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = Yellow500,
+    primaryVariant = Yellow300,
+    secondary = Primary500
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = Primary500,
+    primaryVariant = Primary300,
+    secondary = Yellow500
 )
 
 @Composable
