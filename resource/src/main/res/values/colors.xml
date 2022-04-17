@@ -58,4 +58,16 @@
     <color name="blue800">#0052F9</color>
     <color name="blue900">#004BE7</color>
 
+    <!-- Green 색상 -->
+    <color name="green50">#D4FFE3</color>
+    <color name="green100">#BFFFD5</color>
+    <color name="green200">#A1F0BB</color>
+    <color name="green300">#66D88C</color>
+    <color name="green400">#33CA66</color>
+    <color name="green500">#00BD40</color>
+    <color name="green600">#00B03B</color>
+    <color name="green700">#00B03B</color>
+    <color name="green800">#009833</color>
+    <color name="green900">#008E30</color>
+
 </resources>
