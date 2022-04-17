@@ -70,3 +70,94 @@ val PretendardTypography = Typography(
         letterSpacing = (-0.02).em
     )
 )
+
+val Typography.Display1: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W700,
+        fontSize = 48.sp,
+        lineHeight = 64.sp
+    )
+
+val Typography.Display2: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W700,
+        fontSize = 36.sp,
+        lineHeight = 48.sp,
+        letterSpacing = 0.0025.em
+    )
+
+val Typography.Display3: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W700,
+        fontSize = 28.sp,
+        lineHeight = 40.sp
+    )
+
+val Typography.Subtitle3: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W600,
+        fontSize = 14.sp,
+        lineHeight = 16.sp,
+        letterSpacing = (-0.02).em
+    )
+
+val Typography.LabelBold: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W600,
+        fontSize = 12.sp,
+        lineHeight = 14.4.sp
+    )
+
+val Typography.LabelRegular: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W400,
+        fontSize = 12.sp,
+        lineHeight = 14.4.sp
+    )
+
+val Typography.LabelTag: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W600,
+        fontSize = 10.sp,
+        lineHeight = 10.sp
+    )
+
+val Typography.BodyL: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W400,
+        fontSize = 18.sp,
+        lineHeight = 28.sp
+    )
+
+val Typography.BodyM: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W400,
+        fontSize = 16.sp,
+        lineHeight = 24.sp
+    )
+
+val Typography.BodyS: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W400,
+        fontSize = 14.sp,
+        lineHeight = 20.sp
+    )
+
+val Typography.Disclaimer: TextStyle
+    @Composable get() = TextStyle(
+        fontFamily = Pretendard,
+        fontWeight = FontWeight.W400,
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        letterSpacing = (-0.02).em
+    )
