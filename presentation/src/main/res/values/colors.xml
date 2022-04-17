@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-
-    <!-- Primary 색상 -->
+    <!-- v1 -->
     <color name="color10">#FFFFFF</color>
     <color name="primary50">#FFF4F0</color>
     <color name="primary100">#FFE3D8</color>
@@ -21,7 +13,6 @@
     <color name="primary800">#E34400</color>
     <color name="primary900">#D03E00</color>
 
-    <!-- Gray 색상 -->
     <color name="gray10">#FFFFFF</color>
     <color name="gray50">#F8F8F9</color>
     <color name="gray100">#F0F2F4</color>
@@ -34,7 +25,6 @@
     <color name="gray800">#212936</color>
     <color name="gray900">#171A22</color>
 
-    <!-- Red 색상 -->
     <color name="red50">#FFE8EA</color>
     <color name="red100">#FFE0E4</color>
     <color name="red200">#FFCCD2</color>
@@ -46,7 +36,6 @@
     <color name="red800">#FF334C</color>
     <color name="red900">#FF001F</color>
 
-    <!-- Blue 색상 -->
     <color name="blue50">#E0EAFF</color>
     <color name="blue100">#CBDCFF</color>
     <color name="blue200">#ADC7FF</color>
@@ -58,7 +47,6 @@
     <color name="blue800">#0052F9</color>
     <color name="blue900">#004BE7</color>
 
-    <!-- Green 색상 -->
     <color name="green50">#D4FFE3</color>
     <color name="green100">#BFFFD5</color>
     <color name="green200">#A1F0BB</color>
@@ -70,7 +58,6 @@
     <color name="green800">#009833</color>
     <color name="green900">#008E30</color>
 
-    <!-- Yellow 색상 -->
     <color name="yellow50">#FFF7DB</color>
     <color name="yellow100">#FFF3C9</color>
     <color name="yellow200">#FFEBA4</color>
@@ -82,8 +69,6 @@
     <color name="yellow800">#F5B100</color>
     <color name="yellow900">#E5A500</color>
 
-    <!-- OutLine 색상: 주로 Divider 에 사용 될 예정 -->
     <color name="outline60">#14212936</color>
     <color name="outline100">#21212936</color>
-
 </resources>
