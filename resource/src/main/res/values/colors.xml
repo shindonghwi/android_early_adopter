@@ -82,4 +82,8 @@
     <color name="yellow800">#F5B100</color>
     <color name="yellow900">#E5A500</color>
 
+    <!-- OutLine 색상: 주로 Divider 에 사용 될 예정 -->
+    <color name="outline60">#14212936</color>
+    <color name="outline100">#21212936</color>
+
 </resources>
