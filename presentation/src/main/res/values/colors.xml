@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="white">#FFFFFF</color>
+
     <!-- v1 -->
     <color name="color10">#FFFFFF</color>
     <color name="primary50">#FFF4F0</color>
