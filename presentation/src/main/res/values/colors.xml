@@ -2,6 +2,7 @@
 <resources>
 
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 
     <!-- v1 -->
     <color name="color10">#FFFFFF</color>
