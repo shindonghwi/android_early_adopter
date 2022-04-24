@@ -6,7 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import wolf.shin.earlyadopter.model.screen_router.AccountScreenRouter
 import wolf.shin.earlyadopter.screen.detail.DetailScreen
-import wolf.shin.earlyadopter.screen.account.MoreScreen
+import wolf.shin.earlyadopter.screen.account.AccountScreen
 
 
 fun NavGraphBuilder.addAccountGraph(
@@ -14,7 +14,7 @@ fun NavGraphBuilder.addAccountGraph(
     navController: NavController
 ) {
     composable(AccountScreenRouter.ROOT.route) {
-        MoreScreen {
+        AccountScreen {
             navController.navigate(AccountScreenRouter.DETAIL.route)
         }
     }
