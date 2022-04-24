@@ -4,21 +4,21 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import wolf.shin.earlyadopter.model.screen_router.MoreScreenRouter
+import wolf.shin.earlyadopter.model.screen_router.AccountScreenRouter
 import wolf.shin.earlyadopter.screen.detail.DetailScreen
-import wolf.shin.earlyadopter.screen.more.MoreScreen
+import wolf.shin.earlyadopter.screen.account.MoreScreen
 
 
-fun NavGraphBuilder.addMoreGraph(
+fun NavGraphBuilder.addAccountGraph(
     modifier: Modifier = Modifier,
     navController: NavController
 ) {
-    composable(MoreScreenRouter.ROOT.route) {
+    composable(AccountScreenRouter.ROOT.route) {
         MoreScreen {
-            navController.navigate(MoreScreenRouter.DETAIL.route)
+            navController.navigate(AccountScreenRouter.DETAIL.route)
         }
     }
-    composable(MoreScreenRouter.DETAIL.route) {
-        DetailScreen(from = MoreScreenRouter.DETAIL.route)
+    composable(AccountScreenRouter.DETAIL.route) {
+        DetailScreen(from = AccountScreenRouter.DETAIL.route)
     }
 }

@@ -7,13 +7,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import wolf.shin.earlyadopter.model.DockBarItem
+import wolf.shin.earlyadopter.model.screen_router.AccountScreenRouter
 import wolf.shin.earlyadopter.model.screen_router.CompanyScreenRouter
 import wolf.shin.earlyadopter.model.screen_router.HomeScreenRouter
-import wolf.shin.earlyadopter.model.screen_router.MoreScreenRouter
 import wolf.shin.earlyadopter.model.screen_router.NotificationScreenRouter
+import wolf.shin.earlyadopter.navigation.nav_graph.addAccountGraph
 import wolf.shin.earlyadopter.navigation.nav_graph.addCompanyGraph
 import wolf.shin.earlyadopter.navigation.nav_graph.addHomeGraph
-import wolf.shin.earlyadopter.navigation.nav_graph.addMoreGraph
 import wolf.shin.earlyadopter.navigation.nav_graph.addNotificationGraph
 
 /** 화면 */
@@ -50,10 +50,10 @@ fun WolfAppNavGraph(
         }
 
         navigation(
-            route = DockBarItem.MORE.route,
-            startDestination = MoreScreenRouter.ROOT.route,
+            route = DockBarItem.ACCOUNT.route,
+            startDestination = AccountScreenRouter.ROOT.route,
         ) {
-            addMoreGraph(modifier, navController)
+            addAccountGraph(modifier, navController)
         }
     }
 }

@@ -10,5 +10,5 @@ enum class DockBarItem(
     HOME("home", R.drawable.ic_dockbar_on_home),
     COMPANY("company", R.drawable.ic_dockbar_on_home),
     NOTIFICATION("notification", R.drawable.ic_dockbar_on_home),
-    MORE("more", R.drawable.ic_dockbar_on_home),
+    ACCOUNT("account", R.drawable.ic_dockbar_on_home),
 }

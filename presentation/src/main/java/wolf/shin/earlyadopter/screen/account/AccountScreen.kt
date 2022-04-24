@@ -1,4 +1,4 @@
-package wolf.shin.earlyadopter.screen.more
+package wolf.shin.earlyadopter.screen.account
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
@@ -21,23 +21,13 @@ fun MoreScreen(navigateToDetail: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "MoreScreen",
+            text = "AccountScreen",
             fontSize = 25.sp,
             fontWeight = FontWeight.Bold,
         )
         Spacer(modifier = Modifier.padding(10.dp))
         Button(onClick = { navigateToDetail() }) {
             Text("Move to DetailScreen")
-        }
-    }
-}
-
-@Composable
-@Preview
-fun MoreScreenPreview() {
-    MaterialTheme {
-        MoreScreen {
-
         }
     }
 }

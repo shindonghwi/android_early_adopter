@@ -16,7 +16,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import wolf.shin.earlyadopter.model.DockBarItem
 import wolf.shin.earlyadopter.model.screen_router.CompanyScreenRouter
 import wolf.shin.earlyadopter.model.screen_router.HomeScreenRouter
-import wolf.shin.earlyadopter.model.screen_router.MoreScreenRouter
+import wolf.shin.earlyadopter.model.screen_router.AccountScreenRouter
 import wolf.shin.earlyadopter.model.screen_router.NotificationScreenRouter
 
 @Composable
@@ -71,6 +71,6 @@ private fun findTabRootRoute(tab: String): String {
         DockBarItem.HOME.route -> HomeScreenRouter.ROOT.route
         DockBarItem.COMPANY.route -> CompanyScreenRouter.ROOT.route
         DockBarItem.NOTIFICATION.route -> NotificationScreenRouter.ROOT.route
-        else -> MoreScreenRouter.ROOT.route
+        else -> AccountScreenRouter.ROOT.route
     }
 }
