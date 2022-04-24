@@ -1,33 +1,41 @@
 package wolf.shin.earlyadopter.screen.account
+
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import wolf.shin.earlyadopter.component.image.ProfileImage
+import wolf.shin.earlyadopter.screen.theme.Gray800
 
 @Composable
-fun MoreScreen(navigateToDetail: () -> Unit) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = "AccountScreen",
-            fontSize = 25.sp,
-            fontWeight = FontWeight.Bold,
-        )
-        Spacer(modifier = Modifier.padding(10.dp))
-        Button(onClick = { navigateToDetail() }) {
-            Text("Move to DetailScreen")
+fun AccountScreen(navigateToDetail: () -> Unit) {
+
+    Scaffold(modifier = Modifier.fillMaxSize()) {
+        Column {
+            AccountInfo()
         }
+    }
+}
+
+@Composable
+private fun AccountInfo() {
+    Row(modifier = Modifier
+        .fillMaxWidth()
+        .padding(horizontal = 20.dp), verticalAlignment = Alignment.CenterVertically) {
+        ProfileImage(
+            modifier = Modifier.size(80.dp),
+            imageUrl = "https://windowsforum.kr/files/attach/images/2966154/714/640/006/55e7d5ed1511affba0678ee977c7f40b.jpg"
+        )
+
+        Text(
+            modifier = Modifier.padding(start = 12.dp),
+            text = "활동명이 필요해요!",
+            style = MaterialTheme.typography.subtitle2,
+            color = Gray800
+        )
     }
 }
