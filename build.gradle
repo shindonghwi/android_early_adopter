@@ -3,9 +3,13 @@ buildscript {
         compose_activity = '1.4.0'
         compose_version = '1.1.1'
         compose_navigation = '2.4.2'
+        compose_coil = '2.0.0-rc03'
         core_splash_screen = '1.0.0-beta02'
 
         lifecycle_runtime = '2.4.1'
+
+        /** My Library */
+        wolf_skeleton = '1.0.3v'
     }
 }
 plugins {
