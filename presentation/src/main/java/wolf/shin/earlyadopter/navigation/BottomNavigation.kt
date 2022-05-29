@@ -1,5 +1,6 @@
 package wolf.shin.earlyadopter.navigation
 
+import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
@@ -8,7 +9,6 @@ import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -40,19 +40,12 @@ fun BottomNavigationBar(
             val currentRoute = navBackStackEntry?.destination?.route ?: DockBarItem.HOME
             val tabs = DockBarItem.values().toList()
 
-            LaunchedEffect(currentRoute) {
-                if (currentRoute.toString().contains("home")) {
-                    bottomBarState.value = true
-                } else if (currentRoute.toString().contains("company")) {
-                    bottomBarState.value = true
-                } else if (currentRoute.toString().contains("notification")) {
-                    bottomBarState.value = true
-                } else if (currentRoute.toString().contains("account")) {
-                    bottomBarState.value = true
-                } else {
-                    bottomBarState.value = false
-                }
+            if (currentRoute.toString() == "home/") {
+                bottomBarState.value = true
+            } else {
+                bottomBarState.value = false
             }
+
 
             BottomNavigation {
                 tabs.forEach { tab ->
