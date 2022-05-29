@@ -40,6 +40,8 @@ fun BottomNavigationBar(
                 alwaysShowLabel = true,
                 selected = currentRoute == route,
                 onClick = {
+
+                    // 바텀 메뉴 중복클릭 방지
                     if (currentRoute == "${route}/"){
                         return@BottomNavigationItem
                     }
