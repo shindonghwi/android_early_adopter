@@ -1,5 +1,6 @@
 package wolf.shin.earlyadopter.navigation
 
+import android.util.Log
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
@@ -18,6 +19,7 @@ import wolf.shin.earlyadopter.model.screen_router.CompanyScreenRouter
 import wolf.shin.earlyadopter.model.screen_router.HomeScreenRouter
 import wolf.shin.earlyadopter.model.screen_router.AccountScreenRouter
 import wolf.shin.earlyadopter.model.screen_router.NotificationScreenRouter
+import kotlin.math.log
 
 @Composable
 fun BottomNavigationBar(
@@ -38,6 +40,10 @@ fun BottomNavigationBar(
                 alwaysShowLabel = true,
                 selected = currentRoute == route,
                 onClick = {
+                    if (currentRoute == "${route}/"){
+                        return@BottomNavigationItem
+                    }
+
                     if (currentRoute.toString().startsWith(route)) {
                         navController.navigate(findTabRootRoute(route)) {
                             popUpTo(findStartDestination(navController.graph).id)
