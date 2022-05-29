@@ -1,6 +1,5 @@
 package wolf.shin.earlyadopter.navigation
 
-import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
@@ -9,6 +8,7 @@ import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -36,16 +36,12 @@ fun BottomNavigationBar(
         enter = slideInVertically(initialOffsetY = { it }),
         exit = slideOutVertically(targetOffsetY = { it }),
         content = {
+
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentRoute = navBackStackEntry?.destination?.route ?: DockBarItem.HOME
             val tabs = DockBarItem.values().toList()
 
-            if (currentRoute.toString() == "home/") {
-                bottomBarState.value = true
-            } else {
-                bottomBarState.value = false
-            }
-
+            bottomNavigationIsVisible(currentRoute, bottomBarState)
 
             BottomNavigation {
                 tabs.forEach { tab ->
@@ -83,9 +79,19 @@ fun BottomNavigationBar(
                 }
             }
         })
-
 }
 
+private fun bottomNavigationIsVisible(currentRoute: Any, bottomBarState: MutableState<Boolean>) = when (currentRoute.toString().replace("/", "")) {
+    DockBarItem.HOME.route,
+    DockBarItem.ACCOUNT.route,
+    DockBarItem.COMPANY.route,
+    DockBarItem.NOTIFICATION.route -> {
+        bottomBarState.value = true
+    }
+    else -> {
+        bottomBarState.value = false
+    }
+}
 
 private tailrec fun findStartDestination(graph: NavDestination): NavDestination {
     return if (graph is NavGraph) findStartDestination(graph.startDestination!!) else graph
