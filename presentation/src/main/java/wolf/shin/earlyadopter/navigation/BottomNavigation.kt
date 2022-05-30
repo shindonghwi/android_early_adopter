@@ -27,10 +27,9 @@ import wolf.shin.earlyadopter.model.screen_router.NotificationScreenRouter
 
 @Composable
 fun BottomNavigationBar(
-    navController: NavHostController
+    navController: NavHostController,
+    bottomBarState: MutableState<Boolean>
 ) {
-    val bottomBarState = rememberSaveable { (mutableStateOf(true)) }
-
     AnimatedVisibility(
         visible = bottomBarState.value,
         enter = slideInVertically(initialOffsetY = { it }),
@@ -40,8 +39,6 @@ fun BottomNavigationBar(
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentRoute = navBackStackEntry?.destination?.route ?: DockBarItem.HOME
             val tabs = DockBarItem.values().toList()
-
-            bottomNavigationIsVisible(currentRoute, bottomBarState)
 
             BottomNavigation {
                 tabs.forEach { tab ->
@@ -79,18 +76,6 @@ fun BottomNavigationBar(
                 }
             }
         })
-}
-
-private fun bottomNavigationIsVisible(currentRoute: Any, bottomBarState: MutableState<Boolean>) = when (currentRoute.toString().replace("/", "")) {
-    DockBarItem.HOME.route,
-    DockBarItem.ACCOUNT.route,
-    DockBarItem.COMPANY.route,
-    DockBarItem.NOTIFICATION.route -> {
-        bottomBarState.value = true
-    }
-    else -> {
-        bottomBarState.value = false
-    }
 }
 
 private tailrec fun findStartDestination(graph: NavDestination): NavDestination {
