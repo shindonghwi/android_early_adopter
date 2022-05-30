@@ -28,7 +28,7 @@ fun WolfApp() {
 }
 
 @Composable
-fun BottomNavigationVisibleState(navController: NavHostController, bottomBarState: MutableState<Boolean>) {
+private fun BottomNavigationVisibleState(navController: NavHostController, bottomBarState: MutableState<Boolean>) {
     val scope = rememberCoroutineScope()
 
     navController.currentBackStackEntryFlow.let { backStackFlow ->
